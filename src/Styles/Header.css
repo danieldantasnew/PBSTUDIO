@@ -1,8 +1,7 @@
 header {
-  background-image: url('../Assets/images/header.jpeg');
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
+  width: 100%;
+  position: absolute;
+  z-index: 300;
 }
 
 #headerContent {
@@ -20,5 +19,27 @@ header {
 #links ul {
   display: flex;
   gap: 1rem;
+}
+
+#links a { 
   color: var(--scale-10);
+}
+
+.bg-header {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
+.bg-header img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+
+.bg-header h1{
+  position: absolute;
+  top: 40%;
+  color: var(--scale-20);
 }

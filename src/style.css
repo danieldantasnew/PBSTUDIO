@@ -41,9 +41,15 @@ ul {
 }
 
 body {
-  font-family: "Poppins", "Quicksand medium";
+  font-family: "Poppins", "Quicksand medium", sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 .space-content {
   padding: 0 1rem;
+}
+
+h1, h2, h3 {
+  font-family: "Quicksand medium", sans-serif;
 }
