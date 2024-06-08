@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../src/Styles/Header.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Quicksand bold";
+  src: url('./Assets/quicksand/Quicksand-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Quicksand light";
+  src: url('./Assets/quicksand/Quicksand-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Quicksand medium";
+  src: url('./Assets/quicksand/Quicksand-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Quicksand regular";
+  src: url('./Assets/quicksand/Quicksand-Regular.ttf') format('truetype');
+}
+
+
+:root {
+  --main-color:#181411;
+  --scale-40: #828282;
+  --scale-30: #ABABAB;
+  --scale-20: #F2F2F2;
+  --scale-10: #FFFFFF;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", "Quicksand medium";
+}
+
+.space-content {
+  padding: 0 1rem;
+}
