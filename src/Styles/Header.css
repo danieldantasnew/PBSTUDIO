@@ -1,10 +1,12 @@
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  position: absolute;
-  z-index: 300;
+  height: 28rem;
 }
 
-#headerContent {
+#header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,21 +27,62 @@ header {
   color: var(--scale-10);
 }
 
-.bg-header {
-  height: 50vh;
-  width: 100%;
-  position: relative;
+.bg-apresentacao {
+  color: var(--scale-20);
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  margin-top: 11rem;
+  font-size: 1rem;
 }
 
-.bg-header img {
-  height: 100%;
+.bg-apresentacao > img {
+  height: 28rem;
   width: 100%;
   object-fit: cover;
-  filter: brightness(90%);
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(60%);
 }
 
-.bg-header h1{
+.containerTitle {
+  max-width: 622px;
+}
+
+#title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.containerTitle > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+#marcador {
+  position: relative;
+  display: inline-block;
+}
+
+#marcador svg {
   position: absolute;
-  top: 40%;
-  color: var(--scale-20);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 60px;
+}
+
+#marcador svg path{
+ fill: var(--scale-30);
+}
+
+.bg-apresentacao p {
+  font-size: .9rem;
+  max-width: 622px;
 }

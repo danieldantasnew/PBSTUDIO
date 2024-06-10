@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('../src/Styles/Header.css');
+@import url('../src/Styles/Sobre.css');
+@import url('../src/Styles/Servicos.css');
 
 * {
   margin: 0;
@@ -34,6 +36,7 @@
   --scale-30: #ABABAB;
   --scale-20: #F2F2F2;
   --scale-10: #FFFFFF;
+  --scale-10-transparent: #ffffff85;
 }
 
 ul {
@@ -46,10 +49,40 @@ body {
   width: 100%;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .space-content {
   padding: 0 1rem;
+  max-width: 1020px;
+  width: 100%;
+}
+
+.space-between-containers {
+  margin-top: 2rem;
 }
 
 h1, h2, h3 {
-  font-family: "Quicksand medium", sans-serif;
+  font-family: "Quicksand regular", sans-serif;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--main-color);
+}
+
+.animation-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: animation-left .4s forwards;
+}
+
+@keyframes animation-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

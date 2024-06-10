@@ -1,0 +1,22 @@
+#sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+.imagem-sobre {
+  background-color: var(--scale-40);
+  min-height: 280px;
+}
+
+.texto-sobre {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--main-color);
+}
