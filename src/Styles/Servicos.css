@@ -146,18 +146,18 @@
 .discos {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .audios {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .audio-player {
-  background-color: #C76037;
+  background-color: #ffffff42;
   border-radius: 4px;
   padding: 8px;
   display: grid;
@@ -204,16 +204,73 @@
   background-color: var(--scale-10-transparent);
 }
 
-.audio-info div:last-child {
+.ultima-linha {
   display: flex;
   align-items: center;
   gap: .5rem;
 }
 
-.audio-info div:last-child p {
+.ultima-linha p {
   color: var(--main-color);
   background-color: var(--scale-10-transparent);
   padding: 4px;
   font-weight: 600;
   border-radius: 1px;
+}
+
+.controll {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+}
+
+.controll div {
+  height: 20px;
+  width: 20px;
+}
+
+.controll svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.controll svg:hover path {
+  fill: var(--scale-10);
+}
+
+#audio1 {
+  background-color: #3d96b4;
+}
+
+#audio2 {
+  background-color: #C76037;
+}
+
+#audio3 {
+  background-color: #500903;
+}
+
+#audio4 {
+  background-color: #353535;
+}
+
+#audio5 {
+  background-color: #485041;
+}
+
+#audio6 {
+  background-color: #158A26;
+}
+
+#audio7 {
+  background-color: #8D5657;
+}
+
+#audio8 {
+  background-color: #76767A;
+}
+
+#audio9{
+  background-color: rgba(255, 0, 0, 0.685);
 }
