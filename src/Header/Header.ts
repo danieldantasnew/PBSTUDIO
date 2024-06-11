@@ -18,3 +18,91 @@ export function marcadorSvg() {
     marcador.innerHTML += svg;
   }
 }
+
+function addActive(event: Event) {
+  const btnMenu = document.querySelector<HTMLElement>("[data-btn-menu]");
+  const imgBtnMenu = document.querySelector<HTMLElement>(
+    "[data-imagem-btn-menu]"
+  );
+  const { target } = event;
+
+  if (btnMenu && (target === btnMenu || target === imgBtnMenu)) {
+    btnMenu.classList.add("active");
+  }
+}
+
+function removeActive() {
+  const header = document.querySelector<HTMLElement>("[data-header]");
+  const btnMenu = document.querySelector<HTMLElement>("[data-btn-menu]");
+
+  if (btnMenu && header) {
+    btnMenu.classList.remove("active");
+  }
+}
+
+export function addMenuMobile() {
+  const header = document.querySelector<HTMLElement>("[data-header]");
+  const btnMenu = document.querySelector<HTMLElement>("[data-btn-menu]");
+
+  if (header && !btnMenu) {
+    header.innerHTML += `<div class="btnMenu" data-btn-menu>
+    <img data-imagem-btn-menu src="./src/Assets/Menu-burguer.svg" alt="Menu">
+      <div class="modal" data-modal></div>
+      <div class="menuMobile" data-menu>
+        <img data-close-menu src="./src/Assets/close-menu.svg" alt="Menu">
+      </div>
+    </div>
+    `;
+
+    const btnMenuMobile =
+      document.querySelector<HTMLElement>("[data-btn-menu]");
+    btnMenuMobile?.addEventListener("click", addActive);
+
+    const btnCloseMenuMobile =
+      document.querySelector<HTMLElement>("[data-close-menu]");
+    btnCloseMenuMobile?.addEventListener("click", removeActive);
+
+    const modal = document.querySelector<HTMLElement>("[data-modal]");
+    modal?.addEventListener("click", removeActive);
+
+    const menuMobile = document.querySelector<HTMLElement>("[data-menu]");
+    const nav = document.querySelector<HTMLElement>("[data-nav-links]");
+
+    if (menuMobile && nav) {
+      menuMobile.appendChild(nav);
+      nav.innerHTML += `<div class="headerMenu redesSociais" data-redesSociaisMenu>
+          <h2>Siga-nos</h2>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank"><img src="./src/Assets/facebook.png" alt="facebook"></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/pbstudiopb/" target="_blank">
+                <img src="./src/Assets/instagram.png" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@Paulo67609" target="_blank">
+                <svg width="211" height="157" viewBox="0 0 211 157" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M205.11 26.9844C203.16 16.1945 193.866 8.33679 183.081 5.88367C166.941 2.45312 137.072 0 104.754 0C72.456 0 42.1082 2.45312 25.9495 5.88367C15.1834 8.33679 5.87067 15.6962 3.92015 26.9844C1.95052 39.25 0 56.4219 0 78.5C0 100.578 1.95052 117.75 4.39823 130.016C6.36786 140.806 15.6615 148.663 26.4276 151.116C43.5615 154.547 72.934 157 105.251 157C137.569 157 166.941 154.547 184.075 151.116C194.841 148.663 204.135 141.304 206.105 130.016C208.055 117.75 210.503 100.08 211 78.5C210.006 56.4219 207.558 39.25 205.11 26.9844ZM78.3266 112.844V44.1562L138.047 78.5L78.3266 112.844Z" fill="white"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>`;
+    }
+  }
+}
+
+export function removeMenuMobile() {
+  const header = document.querySelector<HTMLElement>("[data-header]");
+  const btnMenu = document.querySelector<HTMLElement>("[data-btn-menu]");
+  const nav = document.querySelector<HTMLElement>("[data-nav-links]");
+  const redes = document.querySelector<HTMLElement>("[data-redesSociaisMenu]");
+
+  if (header && btnMenu && nav && redes) {
+    header.removeChild(btnMenu);
+    header.appendChild(nav);
+    nav.removeChild(redes);
+  }
+}

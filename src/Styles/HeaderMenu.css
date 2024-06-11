@@ -1,0 +1,65 @@
+.btnMenu .menuMobile {
+  display: none;
+}
+
+.btnMenu > img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.btnMenu.active .menuMobile {
+  padding: 10rem 2rem;
+  display: block;
+  position: fixed;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  right: 0;
+  z-index: 2000;
+  opacity: 0;
+  overflow: hidden;
+  animation: animateMenu .3s forwards;
+}
+
+@keyframes animateMenu {
+  to {
+    opacity: 1;
+    width: 50vw;
+  }
+}
+
+.menuMobile img {
+  width: 23px;
+  height: 24px;
+  position: absolute;
+  right: 14px;
+  top: 18px;
+  z-index: 3001;
+  cursor: pointer;
+}
+
+.menuMobile nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem !important;
+}
+
+.menuMobile nav > ul li::after {
+  width: 100%;
+  height: 2px;
+  background-color: var(--scale-45);
+  content: '';
+  display: inline-block;
+}
+
+.btnMenu.active .modal {
+  background-color: rgba(0, 0, 0, 0.281);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+}

@@ -1,7 +1,16 @@
 import { lideComAnterior, lideComPlay, lideComProximo } from "./Discos/Discos";
-import { marcadorSvg } from "./Header/Header";
+import { marcadorSvg, addMenuMobile, removeMenuMobile } from "./Header/Header";
 import { lideMasterizacao, lideMixagem } from "./Servicos/Servicos";
 
+function verificaTamanhoDaTela() {
+  const mobile = window.matchMedia("(max-width: 767px)").matches;
+  if (mobile) addMenuMobile();
+  else removeMenuMobile();
+}
+
+window.addEventListener("resize", verificaTamanhoDaTela);
+
+verificaTamanhoDaTela();
 marcadorSvg();
 lideMixagem();
 lideMasterizacao();
