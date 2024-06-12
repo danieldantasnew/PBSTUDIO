@@ -15,7 +15,7 @@ marcadorSvg();
 lideMixagem();
 lideMasterizacao();
 setInterval(() => lideMixagem(), 4000);
-setInterval(() => lideMasterizacao(), 800);
+setInterval(() => lideMasterizacao(), 500);
 lideComPlay();
 lideComAnterior();
 lideComProximo();
