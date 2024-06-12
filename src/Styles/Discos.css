@@ -35,7 +35,7 @@
 .audio-player img {
   height: 100%;
   width: 100%;
-  border: 4px;
+  border-radius: 4px;
   object-fit: cover;
   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.144);
 }
@@ -174,11 +174,11 @@
 }
 
 #audio1 {
-  background-color: #3d96b4;
+  background-color: #8D5657;
 }
 
 #audio2 {
-  background-color: #C76037;
+  background-color: #485041 ;
 }
 
 #audio3 {
@@ -190,7 +190,7 @@
 }
 
 #audio5 {
-  background-color: #485041;
+  background-color: #C76037;
 }
 
 #audio6 {
@@ -198,7 +198,7 @@
 }
 
 #audio7 {
-  background-color: #8D5657;
+  background-color: #3d96b4;
 }
 
 #audio8 {
