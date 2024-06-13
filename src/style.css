@@ -4,6 +4,7 @@
 @import url('../src/Styles/Sobre.css');
 @import url('../src/Styles/Servicos.css');
 @import url('../src/Styles/Discos.css');
+@import url('./Styles/Slides.css');
 @import url('./Styles/Contato.css');
 @import url('../src/Styles/Parceiros.css');
 @import url('../src/Styles/Footer.css');
@@ -110,4 +111,9 @@ h2 {
   height: 56px;
   width: 56px;
   cursor: pointer;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
 }

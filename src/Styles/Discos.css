@@ -51,6 +51,7 @@
 .audio-info h4 {
   font-size: .8rem;
   color: var(--scale-10);
+  font-family: "Quicksand regular";
 }
 
 .audio-info p {
@@ -190,7 +191,7 @@
 }
 
 #audio5 {
-  background-color: #C76037;
+  background-color: #35898f;
 }
 
 #audio6 {
