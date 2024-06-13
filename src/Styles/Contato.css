@@ -1,0 +1,175 @@
+#contato {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.content-1 h2 {
+  margin-bottom: 1.5rem;
+}
+
+.content-1 div {
+  margin-bottom: 1rem;
+}
+
+.content-1 div::after {
+  margin-top: 1rem;
+  content: '';
+  display: block;
+  height: 2px;
+  width: 60%;
+  background-color: var(--scale-20);
+  border-radius: 8px;
+}
+
+.content-1 div:last-child::after {
+  background-color: transparent;
+}
+
+.content-1 div h3 {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.content-1 div p {
+  font-size: .8rem;
+  max-width: 260px;
+  color: var(--scale-30);
+}
+
+.div-1 a {
+  margin-top: .5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--main-color);
+  font-family: "Quicksand medium";
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 130px;
+}
+
+.div-1 a:hover {
+  text-decoration: underline;
+}
+
+.div-1 a::after {
+  height: 12px;
+  width: 12px;
+  content: '';
+  display: inline-block;
+  background-image: url('../Assets/arrowMap.png');
+  background-repeat: no-repeat;
+}
+.content-1 div h3 {
+  position: relative;
+}
+
+.content-1 div h3::before {
+  width: 8px;
+  height: 3px;
+  background-color: var(--scale-45);
+  border-radius: 4px;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -12px;
+}
+
+.content-1 div:last-child h3::before {
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+  content: '';
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -12px;
+}
+
+.content-1 div:last-child a,
+.content-1 div:last-child a:visited {
+  color: #5490C8; 
+}
+
+.separadorContato {
+  height: 100%;
+  width: 2px;
+  border-radius: 4px;
+  background-color: var(--scale-20);
+}
+
+.content-2 {
+  padding-left: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-2 {
+  font-size: .8rem;
+  color: var(--scale-30);
+  position: relative;
+}
+
+.whatsapp {
+  padding: 8px 12px;
+  background-color: #25D366;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 8px;
+  color: var(--scale-10);
+  text-decoration: none;
+  max-width: 160px;
+}
+
+.whatsapp:hover {
+  background-color: #1fa550;
+  transition: .3s;
+}
+
+.whatsapp img {
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+}
+
+.content-2 > img {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+@media (max-width: 767px) {
+  #contato {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .separadorContato {
+    height: 2px;
+    width: 100%;
+  }
+
+  .content-2 {
+    padding-left: 0rem;
+    padding-bottom: 7rem;
+  }
+}
+
+@media (min-width: 522px) and (max-width: 767px) {
+  .content-2 {
+      padding-bottom: 14rem !important;
+    }
+}
