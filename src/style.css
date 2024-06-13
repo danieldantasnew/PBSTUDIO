@@ -51,6 +51,10 @@ ul {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", "Quicksand medium", sans-serif;
   min-height: 80vh;
@@ -93,4 +97,17 @@ h2 {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 6rem;
+  right: 1rem;
+  z-index: 1999;
+}
+
+.scrollTop svg  {
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
 }
