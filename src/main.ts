@@ -1,5 +1,10 @@
 import { lideComAnterior, lideComPlay, lideComProximo } from "./Discos/Discos";
-import { marcadorSvg, addMenuMobile, removeMenuMobile } from "./Header/Header";
+import {
+  marcadorSvg,
+  addMenuMobile,
+  removeMenuMobile,
+  removeActiveIfClickLink,
+} from "./Header/Header";
 import { lideMasterizacao, lideMixagem } from "./Servicos/Servicos";
 
 function verificaTamanhoDaTela() {
@@ -11,6 +16,7 @@ function verificaTamanhoDaTela() {
 window.addEventListener("resize", verificaTamanhoDaTela);
 
 verificaTamanhoDaTela();
+removeActiveIfClickLink();
 marcadorSvg();
 lideMixagem();
 lideMasterizacao();
