@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./public/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./src/style.css" />
     <title>PB STUDIO</title>
   </head>
@@ -548,21 +549,44 @@
           </div>
         </div>
       </section>
-      <section class="contentSlides">
-        <div class="prevSlide"></div>
-        <ul class="slides">
-          <li data-slide><img src="./src/Assets/images/slides/1.jpg" alt="Imagem 1"></li>
-          <li data-slide><img src="./src/Assets/images/slides/2.jpg" alt="Imagem 2"></li>
-          <li data-slide><img src="./src/Assets/images/slides/3.jpg" alt="Imagem 3"></li>
-          <li data-slide><img src="./src/Assets/images/slides/4.jpg" alt="Imagem 4"></li>
-          <li data-slide><img src="./src/Assets/images/slides/5.jpg" alt="Imagem 5"></li>
-          <li data-slide><img src="./src/Assets/images/slides/6.jpg" alt="Imagem 6"></li>
-          <li data-slide><img src="./src/Assets/images/slides/7.jpg" alt="Imagem 7"></li>
-          <li data-slide><img src="./src/Assets/images/slides/8.jpg" alt="Imagem 8"></li>
-          <li data-slide><img src="./src/Assets/images/slides/9.jpg" alt="Imagem 9"></li>
-          <li data-slide><img src="./src/Assets/images/slides/10.jpg" alt="Imagem 10"></li>
-        </ul>
-        <div class="nextSlide"></div>
+      <section class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/1.jpg" alt="Imagem 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/2.jpg" alt="Imagem 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/3.jpg" alt="Imagem 3">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/4.jpg" alt="Imagem 4">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/5.jpg" alt="Imagem 5">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/6.jpg" alt="Imagem 6">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/7.jpg" alt="Imagem 7">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/8.jpg" alt="Imagem 8">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/9.jpg" alt="Imagem 9">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/Assets/images/slides/10.jpg" alt="Imagem 10">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev">
+        </div>
+        <div class="swiper-button-next"> 
+        </div>
       </section>
       <section id="contato" class="space-content animation-left">
         <div class="content-1">
@@ -682,6 +706,39 @@
         Todos os direitos reservados<sup>&copy;</sup>
       </div>
     </footer>
+    <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+      const swiper = new Swiper('.swiper', {
+          autoplay: true,
+          breakpoints: {
+            480: {
+              slidesPerView: 1,
+            },
+            800: {
+              slidesPerView: 2
+            },
+            900: {
+              slidesPerView: 3
+            },
+            1800: {
+              slidesPerView: 4
+            }
+          },
+          direction: 'horizontal',
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        });
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

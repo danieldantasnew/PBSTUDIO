@@ -84,6 +84,7 @@ header {
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
+  color: var(--scale-10);
 }
 
 .containerTitle > img {
@@ -106,7 +107,7 @@ header {
 }
 
 #marcador svg path{
- fill: var(--scale-30);
+ fill: var(--scale-25);
 }
 
 .bg-apresentacao p {
