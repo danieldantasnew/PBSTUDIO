@@ -56,6 +56,11 @@ footer #logo img {
 }
 
 .redesSociais li svg {
+  width: 24px;
+  height: 24px;
+}
+
+.redesSociais li:last-child svg {
   width: 32px;
   height: 32px;
 }

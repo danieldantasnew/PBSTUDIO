@@ -213,7 +213,7 @@
 @media (max-width: 892px) {
   .audios {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.2rem;
   }
 }
 

@@ -55,11 +55,19 @@ export function addMenuMobile() {
 
   if (header && !btnMenu) {
     header.innerHTML += `<div class="btnMenu" data-btn-menu>
-    <img data-imagem-btn-menu src="./src/Assets/Menu-burguer.svg" alt="Menu">
-      <div class="modal" data-modal></div>
-      <div class="menuMobile" data-menu>
-        <img data-close-menu src="./src/Assets/close-menu.svg" alt="Menu">
-      </div>
+        
+          <svg data-imagem-btn-menu width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.77002" width="17.2306" height="2.15383" rx="1.07692" fill="white"/>
+            <rect x="0.77002" y="5.9231" width="17.2306" height="2.15383" rx="1.07692" fill="white"/>
+            <rect x="0.77002" y="11.8462" width="17.2306" height="2.15383" rx="1.07692" fill="white"/>
+          </svg>
+        <div class="modal" data-modal></div>
+        <div class="menuMobile" data-menu>
+          <svg data-close-menu width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="19.8394" y="23.332" width="28.0572" height="4.20858" rx="2.10429" transform="rotate(-135 19.8394 23.332)" fill="white"/>
+            <rect x="23" y="2.97595" width="28.0572" height="4.20858" rx="2.10429" transform="rotate(135 23 2.97595)" fill="white"/>
+          </svg>
+        </div>
     </div>
     `;
 
@@ -83,11 +91,17 @@ export function addMenuMobile() {
           <h2>Siga-nos</h2>
           <ul>
             <li>
-              <a href="https://www.facebook.com/" target="_blank"><img src="./src/Assets/facebook.png" alt="facebook"></a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.5245 0C21.53 0 22 0.47 22 6.4755V15.5245C22 21.53 21.53 22 15.5245 22H14.3755V13.991H17.199L17.643 10.8175H14.3755C14.3755 10.8175 14.3705 8.9595 14.3755 8.496C14.385 7.589 15.142 7.13 15.793 7.137C16.444 7.1435 17.792 7.139 17.792 7.139V4.2145C17.792 4.2145 16.6245 4.0635 15.4 4.0505C14.371 4.04 13.2345 4.318 12.3175 5.2425C11.385 6.1825 11.2375 7.582 11.22 9.2925C11.215 9.787 11.22 10.817 11.22 10.817H8.457V13.9905H11.22V22H6.4755C0.47 22 0 21.53 0 15.5245V6.4755C0 0.47 0.47 0 6.4755 0H15.5245Z" fill="white"/>
+                </svg>
+            </a>
             </li>
             <li>
               <a href="https://www.instagram.com/pbstudiopb/" target="_blank">
-                <img src="./src/Assets/instagram.png" alt="instagram">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.38581 0C2.86898 0 0 2.86899 0 6.38582V15.6142C0 19.131 2.86899 22 6.38582 22H15.6142C19.131 22 22 19.131 22 15.6142V6.38583C22 2.869 19.131 1.69231e-05 15.6142 1.69231e-05L6.38581 0ZM6.38581 1.69231H15.6142C18.2154 1.69231 20.3077 3.78125 20.3077 6.38582V15.6142C20.3077 18.2154 18.2187 20.3077 15.6142 20.3077H6.38582C3.78456 20.3077 1.69232 18.2188 1.69232 15.6142V6.38583C1.69232 3.78457 3.78124 1.69231 6.38581 1.69231ZM17.3461 3.38461C16.6454 3.38461 16.0769 3.95313 16.0769 4.65384C16.0769 5.35457 16.6454 5.92307 17.3461 5.92307C18.0469 5.92307 18.6154 5.35457 18.6154 4.65384C18.6154 3.95313 18.0469 3.38461 17.3461 3.38461ZM11 5.07692C7.73767 5.07692 5.07691 7.73768 5.07691 11C5.07691 14.2623 7.73767 16.9231 11 16.9231C14.2623 16.9231 16.9231 14.2623 16.9231 11C16.9231 7.73768 14.2623 5.07692 11 5.07692ZM11 6.76923C13.3467 6.76923 15.2308 8.65324 15.2308 11C15.2308 13.3468 13.3467 15.2308 11 15.2308C8.65323 15.2308 6.76922 13.3468 6.76922 11C6.76922 8.65324 8.65323 6.76923 11 6.76923Z" fill="white"/>
+                </svg>
               </a>
             </li>
             <li>
