@@ -28,7 +28,6 @@
   display: grid;
   gap: .4rem;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 60px;
   position: relative;
 }
 
@@ -49,13 +48,13 @@
 }
 
 .audio-info h4 {
-  font-size: .8rem;
+  font-size: .9rem;
   color: var(--scale-10);
   font-family: "Quicksand regular";
 }
 
 .audio-info p {
-  font-size: .6rem;
+  font-size: .8rem;
 }
 
 .audio-album-info {
@@ -75,6 +74,7 @@
   display: flex;
   align-items: center;
   gap: .5rem;
+  position: relative;
 }
 
 .ultima-linha p {
@@ -83,6 +83,7 @@
   padding: 4px;
   font-weight: 600;
   border-radius: 1px;
+  font-size: .65rem;
 }
 
 .controll {
@@ -102,8 +103,17 @@
   cursor: pointer;
 }
 
-.controll svg:hover path {
-  fill: var(--scale-10);
+.playpause {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border-radius: 50%;
+  padding: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px !important;
+  width: 26px !important;
 }
 
 .icone-play {
