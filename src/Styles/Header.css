@@ -119,6 +119,10 @@ header {
   header {
     height: 30rem;
   }
+
+  .bg-apresentacao {
+    margin-top: 10rem;
+  }
   
   .bg-apresentacao>img {
     height: 30rem;
@@ -133,6 +137,6 @@ header {
   }
 
   .bg-apresentacao p {
-    font-size: .7rem;
+    font-size: .85rem;
   }
 }

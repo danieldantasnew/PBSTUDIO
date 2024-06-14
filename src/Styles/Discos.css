@@ -225,6 +225,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
   }
+
+  .playpause {
+    height: 30px !important;
+    width: 30px !important;
+    bottom: .5px;
+  }
 }
 
 @media (max-width: 630px) {
