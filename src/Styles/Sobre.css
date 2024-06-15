@@ -13,6 +13,7 @@
 .imagem-sobre {
   background-color: var(--scale-40);
   min-height: 280px;
+  border-radius: 8px;
 }
 
 .texto-sobre {
