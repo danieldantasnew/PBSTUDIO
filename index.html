@@ -25,7 +25,7 @@
       </div>
       <div class="bg-apresentacao space-content">
         <img src="./src/Assets/images/header.jpeg" alt="Capa PBSTUDIO" />
-        <div class="containerTitle animation-left">
+        <div class="containerTitle scaleAnimation">
           <div id="title">
             <h1>Há mais de 22 anos dando</h1>
             <span id="marcador">
@@ -35,7 +35,7 @@
           </div>
           <img src="./src/Assets/Audio Wave ProTools.svg" alt="onda de som svg" />
         </div>
-        <p class="animation-left">
+        <p class="scaleAnimation">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure itaque
           ratione quo excepturi culpa harum recusandae doloremque quae odio
           eligendi ullam quasi aspernatur eum, facilis minima dolore fugit nulla
@@ -44,7 +44,7 @@
       </div>
     </header>
     <main class="flex-container">
-      <section id="sobre" class="space-content space-between-containers animation-left">
+      <section id="sobre" data-animation="left" class="space-content space-between-containers">
         <h2>Nossa história</h2>
         <div class="historia">
           <div class="imagem-sobre"></div>
@@ -61,7 +61,7 @@
         </div>
       </section>
       <section id="servicos" class="flex-container space-between-containers" >
-        <div id="servicos-conteudo" class="space-content space-between-containers animation-left">
+        <div id="servicos-conteudo" data-animation="right" class="space-content space-between-containers">
           <h2>Serviços</h2>
           <div class="cartoes">
             <div class="cartao-servico">
@@ -147,7 +147,7 @@
                 aliquid quae beatae alias pariatur, officia explicabo veniam.</p>
             </div>
           </div>
-          <div id="discos" class="discos">
+          <div id="discos" data-animation="left" class="discos">
             <h2>Discos produzidos</h2>
             <div class="audios">
               <div id="audio1" class="audio-player">
@@ -588,7 +588,7 @@
         <div class="swiper-button-next"> 
         </div>
       </section>
-      <section id="contato" class="space-content animation-left">
+      <section id="contato" data-animation="center" class="space-content">
         <div class="content-1">
           <h2>Contato</h2>
           <div class="div-1">
@@ -623,7 +623,7 @@
         </div>
       </section>
       <section id="parceiros" class="flex-container">
-        <div class="space-content animation-left">
+        <div data-animation="right" class="space-content">
           <h2>Nossos parceiros</h2>
           <ul>
             <li><img src="./src/Assets/images/logos/gustavinho.png" alt="Gustavinho Sanfoneiro"></li>
@@ -638,33 +638,33 @@
         </div>
       </section>
     </main>
-    <a class="scrollTop" href="#header">
-      <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_d_792_7)">
-          <circle cx="21" cy="21" r="12" fill="#181411" />
-        </g>
-        <path
-          d="M21 19.5551L16.8027 23.7072C16.6054 23.9024 16.3543 24 16.0493 24C15.7444 24 15.4933 23.9024 15.296 23.7072C15.0987 23.512 15 23.2636 15 22.962C15 22.6603 15.0987 22.4119 15.296 22.2167L20.2466 17.3194C20.4619 17.1065 20.713 17 21 17C21.287 17 21.5381 17.1065 21.7534 17.3194L26.704 22.2167C26.9013 22.4119 27 22.6603 27 22.962C27 23.2636 26.9013 23.512 26.704 23.7072C26.5067 23.9024 26.2556 24 25.9507 24C25.6457 24 25.3946 23.9024 25.1973 23.7072L21 19.5551Z"
-          fill="white" />
-        <defs>
-          <filter id="filter0_d_792_7" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha" />
-            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_792_7" />
-            <feOffset />
-            <feGaussianBlur stdDeviation="4" />
-            <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.28 0" />
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_792_7" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_792_7" result="shape" />
-          </filter>
-        </defs>
-      </svg>
-    </a>
-    <footer class="flex-container">
-      <div id="footer" class="space-content animation-left"> 
+      <a class="scrollTop" href="#header">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_792_7)">
+            <circle cx="21" cy="21" r="12" fill="#181411" />
+          </g>
+          <path
+            d="M21 19.5551L16.8027 23.7072C16.6054 23.9024 16.3543 24 16.0493 24C15.7444 24 15.4933 23.9024 15.296 23.7072C15.0987 23.512 15 23.2636 15 22.962C15 22.6603 15.0987 22.4119 15.296 22.2167L20.2466 17.3194C20.4619 17.1065 20.713 17 21 17C21.287 17 21.5381 17.1065 21.7534 17.3194L26.704 22.2167C26.9013 22.4119 27 22.6603 27 22.962C27 23.2636 26.9013 23.512 26.704 23.7072C26.5067 23.9024 26.2556 24 25.9507 24C25.6457 24 25.3946 23.9024 25.1973 23.7072L21 19.5551Z"
+            fill="white" />
+          <defs>
+            <filter id="filter0_d_792_7" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_792_7" />
+              <feOffset />
+              <feGaussianBlur stdDeviation="4" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.28 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_792_7" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_792_7" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+      </a>
+    <footer class="flex-container ">
+      <div id="footer" class="space-content"> 
         <div id="logo">
           <a href="#header"><img src="./src/Assets/logopbstudio.png" alt="Logo PB STUDIO" /></a>
           <nav id="links">

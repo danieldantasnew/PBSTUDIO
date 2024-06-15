@@ -1,3 +1,4 @@
+import { scrollAtivo } from "./Animations/Animations";
 import { lideComAnterior, lideComPlay, lideComProximo } from "./Discos/Discos";
 import {
   marcadorSvg,
@@ -25,3 +26,4 @@ setInterval(() => lideMasterizacao(), 500);
 lideComPlay();
 lideComAnterior();
 lideComProximo();
+scrollAtivo();

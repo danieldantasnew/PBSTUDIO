@@ -88,15 +88,32 @@ h2 {
 }
 
 .animation-left {
-  opacity: 0;
   transform: translateX(-30px);
-  animation: animation-left .4s forwards;
+  animation: animationSides .6s forwards;
 }
 
-@keyframes animation-left {
+.animation-right {
+  transform: translateX(+30px);
+  animation: animationSides .6s forwards;
+}
+
+@keyframes animationSides {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.scaleAnimation {
+  opacity: 0;
+  transform: scale(.6);
+  animation: scaleAnimation .6s forwards;
+}
+
+@keyframes scaleAnimation {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
