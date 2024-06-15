@@ -31,23 +31,6 @@ function addActive(event: Event) {
   }
 }
 
-function removeActive() {
-  const header = document.querySelector<HTMLElement>("[data-header]");
-  const btnMenu = document.querySelector<HTMLElement>("[data-btn-menu]");
-
-  if (btnMenu && header) {
-    btnMenu.classList.remove("active");
-  }
-}
-
-export function removeActiveIfClickLink() {
-  const links = document.querySelectorAll<HTMLElement>(
-    "[data-link-remove-active]"
-  );
-  if (links)
-    links.forEach((link) => link.addEventListener("click", removeActive));
-}
-
 export function addMenuMobile() {
   removeActiveIfClickLink();
   const header = document.querySelector<HTMLElement>("[data-header]");
@@ -55,12 +38,7 @@ export function addMenuMobile() {
 
   if (header && !btnMenu) {
     header.innerHTML += `<div class="btnMenu" data-btn-menu>
-        
-          <svg data-imagem-btn-menu width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.77002" width="17.2306" height="2.15383" rx="1.07692" fill="white"/>
-            <rect x="0.77002" y="5.9231" width="17.2306" height="2.15383" rx="1.07692" fill="white"/>
-            <rect x="0.77002" y="11.8462" width="17.2306" height="2.15383" rx="1.07692" fill="white"/>
-          </svg>
+        <div class="menuHamburguer" data-imagem-btn-menu aria-label="menu"></div>
         <div class="modal" data-modal></div>
         <div class="menuMobile" data-menu>
           <svg data-close-menu width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,11 +51,11 @@ export function addMenuMobile() {
 
     const btnMenuMobile =
       document.querySelector<HTMLElement>("[data-btn-menu]");
-    btnMenuMobile?.addEventListener("click", addActive);
+    btnMenuMobile?.addEventListener("pointerdown", addActive);
 
     const btnCloseMenuMobile =
       document.querySelector<HTMLElement>("[data-close-menu]");
-    btnCloseMenuMobile?.addEventListener("click", removeActive);
+    btnCloseMenuMobile?.addEventListener("pointerdown", removeActive);
 
     const modal = document.querySelector<HTMLElement>("[data-modal]");
     modal?.addEventListener("click", removeActive);
@@ -115,6 +93,23 @@ export function addMenuMobile() {
         </div>`;
     }
   }
+}
+
+function removeActive() {
+  const header = document.querySelector<HTMLElement>("[data-header]");
+  const btnMenu = document.querySelector<HTMLElement>("[data-btn-menu]");
+
+  if (btnMenu && header) {
+    btnMenu.classList.remove("active");
+  }
+}
+
+export function removeActiveIfClickLink() {
+  const links = document.querySelectorAll<HTMLElement>(
+    "[data-link-remove-active]"
+  );
+  if (links)
+    links.forEach((link) => link.addEventListener("click", removeActive));
 }
 
 export function removeMenuMobile() {

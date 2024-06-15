@@ -2,10 +2,12 @@
   display: none;
 }
 
-.btnMenu > svg {
-  width: 32px;
-  height: 32px;
-  padding: 4px;
+.menuHamburguer {
+  height: 22px;
+  width: 22px;
+  background-image: url('../Assets/Menu-burguer.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   cursor: pointer;
 }
 
