@@ -1,6 +1,7 @@
 #parceiros {
   background-color: var(--scale-20);
   width: 100%;
+  overflow: hidden;
 }
 
 #parceiros > div {

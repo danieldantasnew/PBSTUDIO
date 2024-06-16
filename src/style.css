@@ -72,6 +72,7 @@ body {
   padding: 0 1rem;
   max-width: 1020px;
   width: 100%;
+  overflow: hidden;
 }
 
 .space-between-containers {
