@@ -35,6 +35,8 @@ export function addMenuMobile() {
   removeActiveIfClickLink();
   const header = document.querySelector<HTMLElement>("[data-header]");
   const btnMenu = document.querySelector<HTMLElement>("[data-btn-menu]");
+  const allLinksVisible = document.querySelectorAll<HTMLElement>("#links ul");
+  allLinksVisible.forEach((link) => (link.style.opacity = "1"));
 
   if (header && !btnMenu) {
     header.innerHTML += `<div class="btnMenu" data-btn-menu>

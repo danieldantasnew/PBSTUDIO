@@ -4,6 +4,10 @@
   color: var(--scale-10);
 }
 
+#servicos-conteudo {
+  opacity: 0;
+}
+
 #servicos-conteudo h2 {
   color: var(--scale-10);
 }
@@ -43,28 +47,22 @@
 
 #icone-gravacao div:first-child::after {
   display: block;
+  width: 48px;
+  height: 48px;
   content: '';
   border-radius: 50%;
   background-color: rgba(255, 0, 0, 0.349);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: animationEllipse 3.5s infinite;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  animation: animationEllipse 2s cubic-bezier(0.355, .4, 0.355, .4) infinite;
 }
 
 @keyframes animationEllipse {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  50% {
-    width: 64px;
-    height: 64px;
-  }
-  100% {
-    width: 0;
-    height: 0;
+  to {
+    transform: scale(1.8);
+    opacity: 0;
   }
 }
 
@@ -96,7 +94,7 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
-  transition: .4s;
+  transition: .4s cubic-bezier(0.355, .4, 0.355, .4);
 }
 
 .detalhe {
@@ -121,7 +119,7 @@
   width: 7px;
   background-color: var(--scale-10);
   border-radius: 8px;
-  transition: .8s;
+  transition: .8s ease;
 }
 
 .cartao-servico h3 {
@@ -140,5 +138,13 @@
     justify-content: center;
     grid-template-columns: minmax(280px, 330px);
     padding: 0 12px;
+  }
+  
+  .cartao-servico {
+    opacity: 0;
+  }
+
+  #servicos-conteudo {
+    opacity: 1 !important;
   }
 }

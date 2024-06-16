@@ -89,12 +89,12 @@ h2 {
 
 .animation-left {
   transform: translateX(-30px);
-  animation: animationSides .6s forwards;
+  animation: animationSides .6s cubic-bezier(0.355, .4, 0.355, .4) forwards;
 }
 
 .animation-right {
   transform: translateX(+30px);
-  animation: animationSides .6s forwards;
+  animation: animationSides .6s cubic-bezier(0.355, .4, 0.355, .4) forwards;
 }
 
 @keyframes animationSides {
@@ -104,10 +104,23 @@ h2 {
   }
 }
 
+.animation-top {
+  opacity: 0;
+  transform: translateY(+200px);
+  animation: toTop 2s cubic-bezier(0.2, 1, 0.2, 1) forwards;
+}
+
+@keyframes toTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .scaleAnimation {
   opacity: 0;
   transform: scale(.6);
-  animation: scaleAnimation .6s forwards;
+  animation: scaleAnimation .4s cubic-bezier(0.355, .4, 0.355,.4) alternate forwards;
 }
 
 @keyframes scaleAnimation {
@@ -124,6 +137,13 @@ h2 {
   z-index: 1999;
   height: 56px;
   width: 56px;
+  animation: scrollTop cubic-bezier(0.355, .4, 0.355, .4) 1.5s alternate infinite;
+}
+
+@keyframes scrollTop {
+  to {
+    transform: translateY(-8px);
+  }
 }
 
 .scrollTop svg  {

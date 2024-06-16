@@ -1,4 +1,4 @@
-import { scrollAtivo } from "./Animations/Animations";
+import { scrollAtivoDesktop, scrollAtivoMobile } from "./Animations/Animations";
 import { lideComAnterior, lideComPlay, lideComProximo } from "./Discos/Discos";
 import {
   marcadorSvg,
@@ -8,10 +8,14 @@ import {
 } from "./Header/Header";
 import { lideMasterizacao, lideMixagem } from "./Servicos/Servicos";
 
+let stopAnimationOnScroll = false;
 function verificaTamanhoDaTela() {
   const mobile = window.matchMedia("(max-width: 767px)").matches;
   if (mobile) addMenuMobile();
   else removeMenuMobile();
+
+  !stopAnimationOnScroll && mobile ? scrollAtivoMobile() : scrollAtivoDesktop();
+  stopAnimationOnScroll = true;
 }
 
 window.addEventListener("resize", verificaTamanhoDaTela);
@@ -26,4 +30,3 @@ setInterval(() => lideMasterizacao(), 500);
 lideComPlay();
 lideComAnterior();
 lideComProximo();
-scrollAtivo();

@@ -61,7 +61,15 @@
   display: inline-block;
   background-image: url('../Assets/arrowMap.png');
   background-repeat: no-repeat;
+  animation: animeArrow 1s cubic-bezier(0.355, .4, 0.355, .4) alternate infinite;
 }
+
+@keyframes animeArrow {
+  to {
+    transform: translateX(+2px);
+  }  
+}
+
 .content-1 div h3 {
   position: relative;
 }

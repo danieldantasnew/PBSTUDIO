@@ -45,7 +45,7 @@ header {
   width: 0;
   height: 2px;
   background-color: var(--scale-10);
-  animation: animateHover .3s forwards;
+  animation: animateHover .5s alternate infinite;
 }
 
 @keyframes animateHover {
@@ -115,6 +115,12 @@ header {
   max-width: 622px;
 }
 
+@media (min-width: 568px) and (max-width: 926px) {
+  .bg-apresentacao {
+    margin-top: 8rem;
+  }
+}
+
 @media (max-width: 767px) {
   header {
     height: 30rem;
@@ -138,5 +144,9 @@ header {
 
   .bg-apresentacao p {
     font-size: .85rem;
+  }
+
+  #links ul {
+    opacity: 0;
   }
 }
