@@ -64,6 +64,7 @@ export function scrollAtivoMobile() {
         default:
           break;
       }
+
       observer.unobserve(entries[0].target);
     }
   }, options);

@@ -9,12 +9,17 @@ import {
 import { lideMasterizacao, lideMixagem } from "./Servicos/Servicos";
 
 let stopAnimationOnScroll = false;
+
 function verificaTamanhoDaTela() {
   const mobile = window.matchMedia("(max-width: 767px)").matches;
   if (mobile) addMenuMobile();
   else removeMenuMobile();
 
-  !stopAnimationOnScroll && mobile ? scrollAtivoMobile() : scrollAtivoDesktop();
+  if (!stopAnimationOnScroll) {
+    if (mobile) scrollAtivoMobile();
+    else scrollAtivoDesktop();
+  }
+
   stopAnimationOnScroll = true;
 }
 
