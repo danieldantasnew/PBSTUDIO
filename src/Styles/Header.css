@@ -63,16 +63,21 @@ header {
   font-size: 1rem;
 }
 
-.bg-apresentacao > img {
+.imagem-bg {
   height: 28rem;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   filter: brightness(60%);
+}
+
+.imagem-bg > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .containerTitle {
@@ -119,6 +124,11 @@ header {
   .bg-apresentacao {
     margin-top: 8rem;
   }
+
+  .imagem-bg>img {
+    height: 40rem;
+    z-index: 9000;
+  }
 }
 
 @media (max-width: 767px) {
@@ -127,10 +137,10 @@ header {
   }
 
   .bg-apresentacao {
-    margin-top: 10rem;
+    margin-top: 9.2rem;
   }
   
-  .bg-apresentacao>img {
+  .imagem-bg {
     height: 30rem;
   }
 

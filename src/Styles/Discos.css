@@ -262,3 +262,13 @@
     grid-template-columns: 1fr !important;
   }
 }
+@media (max-width: 767px) {
+
+  #discos.animation-left .audio-player{
+    opacity: 1;
+  }
+
+  .audio-player {
+    opacity: 0;
+  }
+}

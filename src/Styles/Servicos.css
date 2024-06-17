@@ -4,10 +4,6 @@
   color: var(--scale-10);
 }
 
-#servicos-conteudo {
-  opacity: 0;
-}
-
 #servicos-conteudo h2 {
   color: var(--scale-10);
 }
@@ -142,6 +138,10 @@
   
   .cartao-servico {
     opacity: 0;
+  }
+
+  #servicos-conteudo.animation-right .cartoes .cartao-servico {
+    opacity: 1 !important;
   }
 
   #servicos-conteudo {
